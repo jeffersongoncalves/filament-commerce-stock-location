@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\StockLocation\Resources\StockLocation;
 
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\StockLocation\Models\StockLocation;
 use JeffersonGoncalves\FilamentCommerce\StockLocation\CommerceStockLocationPlugin;
@@ -26,9 +26,9 @@ class StockLocationResource extends Resource
         }
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return StockLocationForm::configure($form);
+        return StockLocationForm::configure($schema);
     }
 
     public static function table(Table $table): Table
